@@ -3,5 +3,5 @@
     <%= comment.body %>
 </p>
 <p>
-    <%= link_to 'Destroy Comment', [comment.article, comment], data: {turbo_mothod: :delete,turbo_confirm: 'Are you sure?'} %>
+    <%= button_to 'Destroy', [comment.article, comment], data: {turbo_mothod: :delete,turbo_confirm: 'Are you sure?'} %>
 </p>
