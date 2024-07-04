@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   get 'welcome/index'
-  resources:articles
+  resources:articles do
+    resources :comments
+  end
   root 'welcome#index'
 end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -11,4 +13,5 @@ end
 
   # Defines the root path route ("/")
   # root "posts#index"
+
 
