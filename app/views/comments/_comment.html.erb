@@ -2,6 +2,3 @@
     <i><%= comment.commenter%> </i>:
     <%= comment.body %>
 </p>
-<p>
-    <%= button_to 'Destroy', [comment.article, comment], data: {turbo_mothod: :delete,turbo_confirm: 'Are you sure?'} %>
-</p>

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'welcome/index'
   resources :articles do
-    resources :comments
+    resources :comments, only: %i[index new create]
   end
   root 'welcome#index'
 end
