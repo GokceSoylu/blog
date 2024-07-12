@@ -24,7 +24,7 @@ class ArticlesController < ApplicationController
         if @article.save
             redirect_to @article
         else
-            render 'new'#yeni şablona geri gönderiyoruz
+            render :new, status: :unprocessable_entity#yeni şablona geri gönderiyoruz
         end
     end
 
@@ -33,7 +33,7 @@ class ArticlesController < ApplicationController
         if @article.update(article_params)
             redirect_to @article
         else
-            render 'edit'
+            render :edit, status: :unprocessable_entity
         end
     end
 
